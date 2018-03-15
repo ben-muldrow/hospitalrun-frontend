@@ -4,14 +4,12 @@
       <div class="row">
         <div class="form-group col-xs-6">
           <label class="control-label" for="report-type">{{t 'inventory.reports.reportType'}}</label>
-          {{select-list
-            action=(action (mut reportType))
-            class='form-control'
+          {{em-select
+            property='reportType'
             content=reportTypes
             id='report-type'
             optionValuePath='value'
             optionLabelPath='name'
-            value=reportType
           }}
         </div>
         {{#unless hideLocationFilter}}
