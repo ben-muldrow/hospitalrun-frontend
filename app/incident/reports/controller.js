@@ -87,8 +87,7 @@ export default AbstractReportController.extend(UserSession, NumberFormat, {
     if (reportType === 'department') {
       reportColumns = get(this, 'departmentReportColumns');
       reportProperty = 'department';
-
-    }    else {
+    } else {
       reportColumns = get(this, 'incidentCategoryReportColumns');
       reportProperty = 'categoryName';
     }

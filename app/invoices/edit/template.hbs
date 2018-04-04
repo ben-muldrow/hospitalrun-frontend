@@ -39,7 +39,7 @@
       }}
     </div>
   {{/em-form}}
-  <form class="form-inline">
+  {{#em-form model=model submitButton=false class="form-inline" as |form|}}
     <div class="panel detail-section">
       <div class="panel-heading">
         <h3 class="panel-title">
@@ -140,7 +140,6 @@
                           class='form-control'
                           content=expenseAccountList
                           value=detail.expenseAccount
-                          action=(action (mut detail.expenseAccount))
                         }}
                       </div>
                     </td>
@@ -212,7 +211,7 @@
         </table>
       </div>
     </div>
-  </form>
+  {{/em-form}}
   <div class="panel detail-section">
     <div class="panel-heading">
       <h3 class="panel-title">
